@@ -1,0 +1,33 @@
+
+
+    .navi {
+        position: relative;
+        z-index: 9999;
+        .bg-light {
+            background-color: #343a40 !important;
+        }
+    }
+    .main-sidebar{
+        .nav.nav-pills.nav-sidebar.flex-column {
+            margin-top: 95px;
+        }
+        .nav-link,.nav-link.active, .nav-sidebar > .nav-item, .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+            background-color: #12dbdb69 !important;
+            color: #fff;
+        }
+        [class*="sidebar-dark-"] .nav-sidebar > .nav-item > .nav-treeview {
+            background-color: #1da3a6;
+        }
+        .nav-treeview > .nav-item > .nav-link.active{
+            color: #c2c7d0 !important;
+        }
+        .nav-treeview > .nav-item > .nav-link:hover, .nav-treeview > .nav-item > .nav-link.active:hover {
+            color: #db4312 !important;
+        }
+        .sidebar{
+            .hjk{
+                margin-top: 50px;
+            }
+        }
+    }
+

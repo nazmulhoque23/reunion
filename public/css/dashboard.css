@@ -1,0 +1,27 @@
+.navi {
+  position: relative;
+  z-index: 9999;
+}
+.navi .bg-light {
+  background-color: #343a40 !important;
+}
+
+.main-sidebar .nav.nav-pills.nav-sidebar.flex-column {
+  margin-top: 95px;
+}
+.main-sidebar .nav-link, .main-sidebar .nav-link.active, .main-sidebar .nav-sidebar > .nav-item, .main-sidebar .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .main-sidebar .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: rgba(18, 219, 219, 0.4117647059) !important;
+  color: #fff;
+}
+.main-sidebar [class*=sidebar-dark-] .nav-sidebar > .nav-item > .nav-treeview {
+  background-color: #1da3a6;
+}
+.main-sidebar .nav-treeview > .nav-item > .nav-link.active {
+  color: #c2c7d0 !important;
+}
+.main-sidebar .nav-treeview > .nav-item > .nav-link:hover, .main-sidebar .nav-treeview > .nav-item > .nav-link.active:hover {
+  color: #db4312 !important;
+}
+.main-sidebar .sidebar .hjk {
+  margin-top: 50px;
+}

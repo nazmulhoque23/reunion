@@ -1,0 +1,241 @@
+
+.text-sm.text-gray-700.dark\:text-gray-500.underline {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.text-sm.text-gray-700.dark\:text-gray-500.underline:hover {
+    color: #e45914;
+}
+.bg-light {
+    background-color: #f8f9fa00 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.bgChange{
+    background-color: rgba(0,0,0,0.7) !important;
+}
+.makeup_slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+}
+
+/* .carousel {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 100%;
+} */
+.carousel .carousel-inner .carousel-item img
+{
+    width: 100%;
+    height: 815px;
+}
+.carouseltop {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 52;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: .8s;
+}
+.title_name {
+    margin-bottom: 12px;
+    font-weight: 400;
+    color: #ccc;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+#redate {
+    margin-bottom: 16px;
+    color: #e45914;
+    font-size: 50px;
+}
+.re_btn {
+    background-color: #fff0;
+    padding: 10px 25px;
+    border-radius: 27px;
+    border: 1px solid #f1f4f7;
+    text-transform: uppercase;
+    color: #fff;
+}
+.re_btn:hover {
+    border-color: #e45914;
+    color: #e45914;
+}
+/* ////// */
+.about{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #2e3446;
+}
+.about-title {
+    color: #fff;
+}
+.about-title .lopUi {
+    font-size: 26px;
+    letter-spacing: -0.9px;
+    line-height: 1em;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+.about-title .sdrYt {
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin-top: 10px;
+}
+.about .sdrYt::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background: #e45914;
+    /* bottom: -30px; */
+    margin-top: 53px;
+    left: 5%;
+    position: absolute;
+}
+.reunion-content p:nth-child(1)
+{
+    margin-top: 40px;
+}
+.reunion-content p {
+    font-size: 16px;
+    color: #888c9a;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.63em;
+}
+.about-img img {
+    width: 100%;
+    height: 100%;
+    margin-top: 110px;
+}
+/* ///// */
+.speakers{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #343a4e;
+}
+.speaker-gallery {
+    margin-top: 100px;
+}
+.up-town {
+    text-align: center;
+}
+.up-town h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin-bottom: 24px;
+}
+.content p {
+    color: #fff;
+    margin-top: 26px;
+}
+.pic img {
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+.desig {
+    margin-left: 50px;
+}
+.img-container{
+    display: inline-block;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.pic img{
+    display: block;
+    transition: transform .4s;
+}
+.pic:hover img {
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+}
+.details {
+    position: absolute;
+    z-index: 2;
+    margin-top: -200px;
+    margin-left: 100px;
+    color: #fff;
+    display: none;
+}
+.all_over:hover .details {
+    display: block;
+}
+/* ///// */
+
+.sponsor{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: url("/images/sponser-img.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
+}
+.sponsor .container .speaker-gallery img{
+    margin-bottom: 50px;
+}
+/* ///// */
+.footer{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("/images/footer.png") !important;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top-part {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.social ul li {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    margin: 0 30px;
+}
+.social ul li a{
+    padding: 20px 18px 24px 18px;
+    transition: all 400ms ease;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.social ul li a svg{
+    width: 30px;
+    height: 30px;
+    color: #888c9a;
+}
+.social ul li a:hover svg
+{
+    color: #e45914;
+}
+.copyright {
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+.copyright p {
+    margin-top: 20px;
+    color: #fff;
+}
