@@ -191,6 +191,10 @@
     background-size: cover !important; 
 }
 .sponsor .container .speaker-gallery img{
+    margin-bottom: 12px;
+}
+.sponsor .container .speaker-gallery .dd
+{
     margin-bottom: 50px;
 }
 /* ///// */
@@ -241,3 +245,27 @@
 }
 
 /* payment */
+
+.mb-25{
+    line-height: 36px;
+    font-size: 24px;
+    color: #444 !important;
+    font-weight: 600;
+    margin-top: 11px;
+}
+.mb-25 a{
+    color: #19686d;
+}
+.pull-right {
+    float: right;
+    padding: 10px 18px !important;
+    background-color: #fff;
+    border: 2px solid #ddd !important;
+    color: #455a64 !important;
+    border-radius: 60px !important;
+}
+.pull-right:hover {
+    background: #fafafa;
+    border: 2px solid #19686d !important;
+    color: #19686d !important;
+}

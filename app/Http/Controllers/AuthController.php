@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Logo;
 
 class AuthController extends Controller
 {
     public function index(){
+        $logos = Logo::all();
         return view('auth.login');
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Logo;
 use App\Models\Slider;
 use App\Models\About;
+use App\Models\SponsorInfo;
 
 class FrontController extends Controller
 {
@@ -19,7 +20,8 @@ class FrontController extends Controller
         $logos = Logo::all();
         $sliders = Slider::all();
         $abouts = About::all();
-        return view('welcome', compact('logos','sliders','abouts'));
+        $sponsorinfos = SponsorInfo::all();
+        return view('welcome', compact('logos','sliders','abouts','sponsorinfos'));
     }
 
     /**

@@ -5,29 +5,15 @@
             <img src="{{asset('images/line1.png')}}" alt="">
         </div>
         <div class="speaker-gallery">
+            
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-1.png')}}" alt="">
+            @foreach($sponsorinfos as $item)
+                <div class="col-md-3 text-center dd">
+                    <img src="{{asset('images/sponsor/'. $item->image)}}" alt="">
+                    <h3 style="color: #fff;">{{$item->name}}</h3>
+                    <p style="color: #fff;">{{$item->address}}</p>
                 </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-2.png')}}" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-3.png')}}" alt="">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-4.png')}}" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-5.png')}}" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img src="{{asset('images/sponsor-6.png')}}" alt="">
-                </div>
+            @endforeach
             </div>
         </div>
     </div>

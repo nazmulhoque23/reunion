@@ -7,6 +7,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\SponsorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,10 @@ Route::post('/basic-info/about', [BasicController::class, 'aboutstore'])->name('
 Route::delete('/basic-info/about/{id}',[BasicController::class,'aboutdestroy'])->name('basic-info.aboutdelete');
 
 
+//sponsor
+Route::get('/sponsor', [SponsorController::class, 'index'])->name('sponsor.index');
+Route::get('/sponsor/create', [SponsorController::class, 'create'])->name('sponsor.create');
+Route::post('/sponsor/store', [SponsorController::class, 'store'])->name('sponsor.store');
+Route::get('/sponsor/edit/{id}',[SponsorController::class,'edit'])->name('sponsor.edit');
+Route::post('/sponsor/update/{id}',[SponsorController::class,'update'])->name('sponsor.update');
+Route::delete('/sponsor/delete/{id}',[SponsorController::class,'destroy'])->name('sponsor.destroy');

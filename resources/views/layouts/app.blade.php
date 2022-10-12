@@ -103,7 +103,7 @@
 </head>
 <body>
     <!-- <div id=""> -->
-        @include('layouts.nav')
+        @include('layouts.nav-t')
 
         <!-- <main class="py-4 llb"> -->
         @yield('content')
