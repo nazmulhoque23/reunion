@@ -15,6 +15,7 @@ use App\Models\District;
 use App\Models\Division;
 use App\Models\Blood;
 use App\Models\Tshirt;
+use App\Models\DressCategory;
 
 class RegisterController extends Controller
 {
@@ -26,7 +27,8 @@ class RegisterController extends Controller
         $divisions = Division::all();
         $bloods = Blood::all();
         $thsirts = Tshirt::all();
-        return view('auth.register', compact('batches','categories','districts','divisions','bloods','thsirts'));
+        $dresscategories = DressCategory::all();
+        return view('auth.register', compact('batches','categories','districts','divisions','bloods','thsirts','dresscategories'));
     }
     /*
     |--------------------------------------------------------------------------
