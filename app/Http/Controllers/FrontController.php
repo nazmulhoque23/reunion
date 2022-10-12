@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Logo;
 use App\Models\Slider;
+use App\Models\About;
 
 class FrontController extends Controller
 {
@@ -17,7 +18,8 @@ class FrontController extends Controller
     {
         $logos = Logo::all();
         $sliders = Slider::all();
-        return view('welcome', compact('logos','sliders'));
+        $abouts = About::all();
+        return view('welcome', compact('logos','sliders','abouts'));
     }
 
     /**
