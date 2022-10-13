@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SubCommittee;
+use App\Models\BranchCommittee;
 
-class SubCommitteeController extends Controller
+class BranchCommitteeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class SubCommitteeController extends Controller
      */
     public function index()
     {
-        $subCommittee = SubCommittee::all();
-        return view('layouts.dashboard.subcom.index', compact('subCommittee'));
+        $branchCommittee = BranchCommittee::all();
+        return view('layouts.dashboard.branch.index', compact('branchCommittee'));
     }
 
     /**
@@ -25,7 +25,7 @@ class SubCommitteeController extends Controller
      */
     public function create()
     {
-        return view('layouts.dashboard.subcom.create');
+        return view('layouts.dashboard.branch.create');
     }
 
     /**
@@ -47,15 +47,15 @@ class SubCommitteeController extends Controller
         $input= $request->all();
 
         if($image = $request->file('image')){
-            $destinationPath = 'images/sub_com';
+            $destinationPath = 'images/branch';
             $profileImage = date('YmdHis') . ".". $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
         }
 
-        SubCommittee::create($input);
+        BranchCommittee::create($input);
 
-        return redirect()->route('sub-committe.index');
+        return redirect()->route('branch-committe.index');
     }
 
     /**
@@ -77,8 +77,8 @@ class SubCommitteeController extends Controller
      */
     public function edit($id)
     {
-        $subCommittee = SubCommittee::find($id);
-        return view('layouts.dashboard.subcom.edit',compact('subCommittee'));
+        $branchCommittee = BranchCommittee::find($id);
+        return view('layouts.dashboard.branch.edit',compact('branchCommittee'));
     }
 
     /**
@@ -98,12 +98,12 @@ class SubCommitteeController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
 
         ]);
-        $subCommittee = SubCommittee::find($id);
+        $branchCommittee = BranchCommittee::find($id);
 
         $input = $request->all();
 
         if($image = $request->file('image')){
-            $destinationPath = 'images/sub_com';
+            $destinationPath = 'images/branch';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
@@ -111,9 +111,9 @@ class SubCommitteeController extends Controller
             unset($input['image']);
         }
 
-        $subCommittee->update($input);
+        $branchCommittee ->update($input);
 
-        return redirect()->route('sub-committe.index');
+        return redirect()->route('branch-committe.index');
     }
 
     /**
@@ -124,7 +124,7 @@ class SubCommitteeController extends Controller
      */
     public function destroy($id)
     {
-        SubCommittee::find($id)->delete();
+        BranchCommittee::find($id)->delete();
         return redirect()->back();
     }
 }

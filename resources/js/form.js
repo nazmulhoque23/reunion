@@ -12,7 +12,7 @@ $(document).ready(function(){
         success: function(data){
 
             console.log("d: "+data);
-          op+= '<input type="text" class="form-control" value="'+data.price+'" name="pay" required>'
+          op+= '<input type="text" class="form-control" value="'+data.price+'" name="pay" readonly required>'
           
 
           div.find('.pay').html(" ");

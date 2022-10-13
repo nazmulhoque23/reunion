@@ -15,12 +15,13 @@ class CreateParticipentsTable extends Migration
     {
         Schema::create('participents', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('batch_id');
+            $table->bigInteger('add_id')->nullable();
+            $table->bigInteger('batch_id')->nullable();
             $table->bigInteger('cat_id');
             $table->string('pay');
             $table->string('name');
             $table->string('g_name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('mobile');
             $table->string('fb_link')->nullable();
             $table->string('address');
@@ -34,7 +35,7 @@ class CreateParticipentsTable extends Migration
             $table->string('organization')->nullable();
             $table->string('designation')->nullable();
             $table->string('org_address')->nullable();
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

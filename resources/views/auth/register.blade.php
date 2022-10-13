@@ -20,11 +20,22 @@
                 @endif
                     <form method="POST" action="{{ route('register.store') }}" enctype="multipart/form-data">
                         @csrf
-                        <h3>Application Info</h3>
+                        <h3>আবেদনকারীর তথ্যঃ</h3>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="year" class="form-label">এস এস সি ব্যাচ/ভর্তির বছর</label>
+                                    <label for="year" class="form-label">ভর্তির বছর</label>
+                                    <select class="form-control" aria-label="Defaul" name="add_id" required>
+                                        <option selected>Select Admission Year</option>
+                                        @foreach($batches as $b)
+                                        <option value="{{$b->id}}">{{$b->batch_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="year" class="form-label">এস এস সি ব্যাচ</label>
                                     <select class="form-control" aria-label="Defaul" name="batch_id" required>
                                         <option selected>Select Batch</option>
                                         @foreach($batches as $b)
@@ -33,7 +44,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">বিভাগ নাম</label>
                                     <select class="form-control cat_id" aria-label="Defaul" name="cat_id" required>
@@ -44,11 +55,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">অংশগ্রহণের ফি</label>
                                     <div class="pay">
-                                        <input type="text" class="form-control" name="pay" disabled required>
+                                        <input type="text" class="form-control" name="pay" readonly required>
                                     </div>
                                     
                                 </div>
@@ -167,7 +178,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">পোশাক এর ধরণ</label>
-                                    <select class="form-control" id="mySelectBox" aria-label="Defaul" name="dress_cat_id" required>
+                                    <select class="form-control" id="mySelectBox" aria-label="Defaul" name="dress_cat_id">
                                         <option selected>Choose</option>
                                         @foreach($dresscategories as $item)
                                         <option value="{{$item->id}}">{{$item->d_name}}</option>
@@ -178,7 +189,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="img" class="form-label">ছবি</label>
-                                    <input id="img" type="file" class="form-control" name="photo" required>
+                                    <input id="img" type="file" class="form-control" name="photo">
                                 </div>
                             </div>
                         </div>
@@ -200,25 +211,25 @@
                                 </div>
                             </div>
                         </div>
-                        <h3>Applicant Position</h3>
+                        <h3>বর্তমান কর্মস্থলঃ</h3>
 
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="organization" class="form-label">প্রতিষ্টান</label>
-                                    <input id="organization" type="text" class="form-control" name="organization" required>
+                                    <label for="organization" class="form-label">প্রতিষ্ঠানের নাম</label>
+                                    <input id="organization" type="text" class="form-control" name="organization" >
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="designation" class="form-label">পদবী</label>
-                                    <input id="designation" type="text" class="form-control" name="designation" required>
+                                    <input id="designation" type="text" class="form-control" name="designation" >
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="mailing_address" class="form-label">প্রতিষ্টানের ঠিকানা</label>
-                                    <input id="mailing_address" type="text" class="form-control" name="org_address" required>
+                                    <label for="mailing_address" class="form-label">প্রতিষ্ঠানের ঠিকানা</label>
+                                    <input id="mailing_address" type="text" class="form-control" name="org_address" >
                                 </div>
                             </div>
                         </div>

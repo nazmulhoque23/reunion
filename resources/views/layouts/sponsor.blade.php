@@ -1,7 +1,7 @@
 <div class="sponsor">
     <div class="container">
         <div class="up-town">
-            <h3><b>EVENT SPONSORS</b>  SPECIAL THANKS</h3>
+            <h3>যাদের প্রতি আমরা কৃতজ্ঞঃ</h3>
             <img src="{{asset('images/line1.png')}}" alt="">
         </div>
         <div class="speaker-gallery">
@@ -9,7 +9,7 @@
             <div class="row">
             @foreach($sponsorinfos as $item)
                 <div class="col-md-3 text-center dd">
-                    <img src="{{asset('images/sponsor/'. $item->image)}}" alt="">
+                    <img src="{{asset('images/sponsor/'. $item->image)}}" alt="" width="220px" height="324px">
                     <h3 style="color: #fff;">{{$item->name}}</h3>
                     <p style="color: #fff;">{{$item->address}}</p>
                 </div>

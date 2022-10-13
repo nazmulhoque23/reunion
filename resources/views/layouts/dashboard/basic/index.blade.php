@@ -43,8 +43,8 @@
                                     @foreach($logos as $item)
                                     <tr>
                                         <th scope="row">{{$item->id}}</th>
-                                        <td><img src="{{asset('images/logo/'. $item->school_logo)}}" alt="" width="40px" height="40px"></td>
-                                        <td><img src="{{asset('images/logo/'. $item->sg_logo)}}" alt="" width="40px" height="40px"></td>
+                                        <td><img src="{{asset('images/logo_one/'. $item->school_logo)}}" alt="" width="40px" height="40px"></td>
+                                        <td><img src="{{asset('images/logo_two/'. $item->sg_logo)}}" alt="" width="40px" height="40px"></td>
                                         <td><form method="POST" id="delete-form-{{$item->id}}" 
                                                     action="{{route('basic-info.logodelete',$item->id)}}" style="display: none;">
                                                     @csrf

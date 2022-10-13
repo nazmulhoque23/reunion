@@ -8,6 +8,8 @@ use App\Models\Slider;
 use App\Models\About;
 use App\Models\SponsorInfo;
 use App\Models\ManagementInfo;
+use App\Models\SubCommittee;
+use App\Models\BranchCommittee;
 
 class FrontController extends Controller
 {
@@ -32,6 +34,20 @@ class FrontController extends Controller
         return view('main_committe', compact('logos','managementInfo'));
     }
 
+    public function subcommiteeview()
+    {
+        $logos = Logo::all();
+        $subCommittee = SubCommittee::all();
+        return view('sub_committe', compact('logos','subCommittee'));
+    }
+
+    public function branchcommiteeview()
+    {
+        $logos = Logo::all();
+        $branchCommittee = BranchCommittee::all();
+        return view('branch_committee', compact('logos','branchCommittee'));
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

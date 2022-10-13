@@ -50,7 +50,7 @@ class BasicController extends Controller
             $file = $request->file('school_logo');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/logo/',$filename);
+            $file->move('images/logo_one/',$filename);
             $input->school_logo = $filename;
         }else{
             $input->school_logo = '';
@@ -59,7 +59,7 @@ class BasicController extends Controller
             $file = $request->file('sg_logo');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/logo/',$filename);
+            $file->move('images/logo_two/',$filename);
             $input->sg_logo = $filename;
         }else{
             $input->sg_logo = '';

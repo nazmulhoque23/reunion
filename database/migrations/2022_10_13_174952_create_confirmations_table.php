@@ -15,8 +15,10 @@ class CreateConfirmationsTable extends Migration
     {
         Schema::create('confirmations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('order_id')->unique()->nullable();
-            $table->double('amount');
+            $table->string('order_id');
+            $table->double('amount')->nullable();
+            $table->string('mobile')->nullable();
+            $table->string('msg')->nullable();
             $table->timestamps();
         });
     }

@@ -9,6 +9,8 @@ use App\Http\Controllers\BasicController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\SponsorController;
 use App\Http\Controllers\ManagementInfoController;
+use App\Http\Controllers\SubCommitteeController;
+use App\Http\Controllers\BranchCommitteeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +33,14 @@ Route::get('logout', [AuthController::class,'logout'])->name('logout');
 Route::get('/register', [RegistrationController::class, 'index'])->name('register');
 Route::post('payment-gateway', [RegistrationController::class, 'store'])->name('register.store');
 Route::get('/registerCategory', [RegistrationController::class, 'registerCategory']);
-Route::get('success-url', [RegistrationController::class, 'verifyPayment'])->name('success-url');
+Route::get('success-url', [RegistrationController::class, 'verifyPayment']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 
 Route::get('/main_commitee', [FrontController::class, 'maincommiteeview'])->name('main.com.view');
+Route::get('/sub_commitee', [FrontController::class, 'subcommiteeview'])->name('sub.com.view');
+Route::get('/branch_commitee', [FrontController::class, 'branchcommiteeview'])->name('branch.com.view');
 
 
 
@@ -67,3 +71,21 @@ Route::post('/main-committe/store', [ManagementInfoController::class, 'store'])-
 Route::get('/main-committe/edit/{id}',[ManagementInfoController::class,'edit'])->name('main-committe.edit');
 Route::post('/main-committe/update/{id}',[ManagementInfoController::class,'update'])->name('main-committe.update');
 Route::delete('/main-committe/delete/{id}',[ManagementInfoController::class,'destroy'])->name('main-committe.destroy');
+
+//sub committee
+Route::get('/sub-committe', [SubCommitteeController::class, 'index'])->name('sub-committe.index');
+Route::get('/sub-committe/create', [SubCommitteeController::class, 'create'])->name('sub-committe.create');
+Route::post('/sub-committe/store', [SubCommitteeController::class, 'store'])->name('sub-committe.store');
+Route::get('/sub-committe/edit/{id}',[SubCommitteeController::class,'edit'])->name('sub-committe.edit');
+Route::post('/sub-committe/update/{id}',[SubCommitteeController::class,'update'])->name('sub-committe.update');
+Route::delete('/sub-committe/delete/{id}',[SubCommitteeController::class,'destroy'])->name('sub-committe.destroy');
+
+//branch committee
+
+Route::get('/branch-committe', [BranchCommitteeController::class, 'index'])->name('branch-committe.index');
+Route::get('/branch-committe/create', [BranchCommitteeController::class, 'create'])->name('branch-committe.create');
+Route::post('/branch-committe/store', [BranchCommitteeController::class, 'store'])->name('branch-committe.store');
+Route::get('/branch-committe/edit/{id}',[BranchCommitteeController::class,'edit'])->name('branch-committe.edit');
+Route::post('/branch-committe/update/{id}',[BranchCommitteeController::class,'update'])->name('branch-committe.update');
+Route::delete('/branch-committe/delete/{id}',[BranchCommitteeController::class,'destroy'])->name('branch-committe.destroy');
+

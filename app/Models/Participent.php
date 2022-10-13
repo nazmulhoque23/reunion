@@ -10,6 +10,7 @@ class Participent extends Model
     use HasFactory;
 
     protected $fillable = [
+        'add_id',
         'batch_id',
         'cat_id',
         'pay',

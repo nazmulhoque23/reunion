@@ -3,9 +3,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-md-3">
-                @foreach($logos as $item)
-                    <a class="navbar-brandd lo ghyu"><img src="{{asset('images/logo/'. $item->school_logo)}}" alt=""></a>
-                @endforeach
+                @php
+                    $heee = DB::table('logos')->latest('id')->first();
+                @endphp
+                @if($heee->school_logo)
+                    <a class="navbar-brandd lo ghyu"><img src="{{asset('images/logo_one/'. $heee->school_logo)}}" alt=""></a>
+                @endif
                 </div>
                 <div class="col-sm-6 col-md-6 text-center">
                     <a href="#" class="title">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</a>
@@ -14,13 +17,15 @@
                 <div class="col-sm-3 col-md-3">
                     <div class="row">
                         <div class="col-md-6">
-                            <a class="navbar-brandd lo"><img src="{{asset('images/logo/'. $item->sg_logo)}}" alt=""></a>
+                        @if($heee->school_logo)
+                            <a class="navbar-brandd lo"><img src="{{asset('images/logo_two/'. $heee->sg_logo)}}" alt=""></a>
+                            @endif
                         </div>
                         <div class="col-md-6">
                             @if (Route::has('login'))
                                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
-                                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                                     @else
                                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 

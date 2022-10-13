@@ -12,11 +12,29 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">হোম</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">বিদ্যালয় সম্পর্কিত</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            বিদ্যালয় সম্পর্কিত
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">একটি নাম, একটি ইতিহাস</a></li>
+                                <li><a class="dropdown-item" href="#">প্রতিষ্ঠাকাল ও নামকরণ</a></li>
+                                <li><a class="dropdown-item" href="#">এডভোকেট বেলায়েত হোসেন  সাহেবের জীবন বৃন্তান্তঃ</a></li>
+                                <li><a class="dropdown-item" href="#">প্র্রতিষ্ঠাতার নাম ও ব্যাক্তি পরিচিতি</a></li>
+                                <li><a class="dropdown-item" href="#">প্রাথমিক উদ্যোক্তাবৃন্দের নাম ও পরিচিতি</a></li>
+                                <li><a class="dropdown-item" href="#">স্কুল পরিচালনা পর্ষদ এর নাম ও পরিচিতি</a></li>
+                                <li><a class="dropdown-item" href="#">প্রধান শিক্ষক বৃন্দের নাম ও পরিচিতি</a></li>
+                                <li><a class="dropdown-item" href="#">সকল সফল শিক্ষার্থীর নাম ও পরিচিতি</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">শিক্ষা সম্পর্কিত</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            শিক্ষা সম্পর্কিত
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">শিক্ষা কার্যক্রম</a></li>
+                                <li><a class="dropdown-item" href="#">এসএসসি পরীক্ষার ফলাফল</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,13 +42,20 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="{{route('main.com.view')}}">সূূবর্ণ জয়ন্তী পরিচালনা মূল কমিটি</a></li>
-                                <li><a class="dropdown-item" href="#">সূূবর্ণ জয়ন্তী পরিচালনা শাখা কমিটি</a></li>
-                                <li><a class="dropdown-item" href="#">সূূবর্ণ জয়ন্তী পরিচালনা উপ শাখা কমিটি</a></li>
+                                <li><a class="dropdown-item" href="{{route('sub.com.view')}}">সূূবর্ণ জয়ন্তী পরিচালনা শাখা কমিটি</a></li>
+                                <li><a class="dropdown-item" href="{{route('branch.com.view')}}">সূূবর্ণ জয়ন্তী পরিচালনা উপ শাখা কমিটি</a></li>
                                 <li><a class="dropdown-item" href="#">আবেদনকারীর তালিকা</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ভোর বাজার সম্পর্কিত</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ভোর বাজার সম্পর্কিত
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">নামকরণ, ইতিবৃত্ত ও পরিধি</a></li>
+                                <li><a class="dropdown-item" href="#">বিভিন্ন শিক্ষা প্রতিষ্ঠানের নাম ও পরিচিতি</a></li>
+                                <li><a class="dropdown-item" href="#">স্বনামধন্য ব্যাক্তিবর্গের নাম ও পরিচিতি</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

@@ -59,8 +59,8 @@ class RegistrationController extends Controller
     {
         
         $this->validate($request,[
-            
-            'batch_id' => 'required',
+            'add_id' => 'nullable',
+            'batch_id' => 'nullable',
             'cat_id' => 'required',
             'pay' => 'required',
             'name' => 'required',
@@ -83,6 +83,7 @@ class RegistrationController extends Controller
         ]);
         $input = new Participent();
         
+        $input->add_id = $request->add_id;
         $input->batch_id = $request->batch_id;
         $input->cat_id = $request->cat_id;
         $input->pay = $request->pay;
@@ -141,17 +142,25 @@ class RegistrationController extends Controller
         $order_id = $request->order_id;
         $shurjopay_service = new ShurjopayController();
 
-        $order_detials = DB::table('participents')
-            ->where('mobile', $order_id)
-            ->select('mobile', 'status')->first();
-        if ($order_detials->status == 'Pending') {
-            $shurjopay_service->verify($order_id);
-
-            $update_product = DB::table('participents')
-                    ->where('mobile', $order_id)
-                    ->update(['status' => 'Complete']);
-        }
-        $data =  $shurjopay_service->verify($order_id);
+        
+        $data = $shurjopay_service->verify($order_id);
+        // dd($data);
+        // echo"$data";
+        $list=json_decode($data,true);
+        
+        // echo $list[0]['order_id'];
+        // echo "<pre>";
+        // print_r($list);
+        // echo "</pre>";
+        
+        $input = new Confirmation();
+        $input->order_id = $list[0]['order_id'];
+        $input-> amount = $list[0]['amount'];
+        $input->mobile = $list[0]['customer_order_id'];
+        $input->msg = $list[0]['sp_massage'];
+        $input->save();
+        // dd($data); 
+        
         return view('payment');
     }
 

@@ -72,13 +72,13 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link active">
+                    <a href="{{route('sub-committe.index')}}" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Sub Commitee</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="" class="nav-link active">
+                    <a href="{{route('branch-committe.index')}}" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Branch Commitee</p>
                     </a>

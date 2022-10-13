@@ -1,16 +1,21 @@
 <div class="about">
     <div class="container">
         <div class="row">
+                @php
+                    $abs = DB::table('abouts')->latest('id')->first();
+                @endphp
             <div class="col-md-6">
                 <div class="about-title">
                     <!-- <span class="lopUi">About</span> -->
                     <h3 class="sdrYt">সুবর্ণ জয়ন্তী উৎসব ২০২৩</h3>
                 </div>
                 <div class="reunion-content">
-                    @foreach($abouts as $item)
-                    <p>{{$item->content_one}}</p>
-                    <p>{{$item->content_two}}</p>
-                    @endforeach
+                    @if($abs->content_one)
+                    <p>{{$abs->content_one}}</p>
+                    @endif
+                    @if($abs->content_two)
+                    <p>{{$abs->content_two}}</p>
+                    @endif
                 </div>
             </div>
             <div class="col-md-6 text-center">
@@ -19,9 +24,9 @@
                     <!-- <h3 class="sdrYt">সুবর্ণ জয়ন্তী উৎসব ২০২৩</h3> -->
                 </div>
                 <div class="about-img">
-                @foreach($abouts as $item)
-                    <img src="{{asset('images/about/'. $item->abimg)}}" alt="">
-                @endforeach
+                @if($abs->abimg)
+                    <img src="{{asset('images/about/'. $abs->abimg)}}" alt="">
+                @endif
                 </div>
             </div>
         </div>
