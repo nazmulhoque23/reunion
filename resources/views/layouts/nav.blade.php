@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-6 col-md-6 text-center">
                     <a href="#" class="title">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</a>
-                    <a href="#" class="title2">ডাকঘরঃ ভোর বাজার, উপজেলাঃ সোনাগাজী, জেলাঃ ফেনী</a>
+                    <a href="#" class="title2"> ডাকঘরঃ ভোর বাজার, উপজেলাঃ সোনাগাজী, জেলাঃ ফেনী</a>
                 </div>
                 <div class="col-sm-3 col-md-3">
                     <div class="row">
@@ -54,6 +54,7 @@
   text-decoration: navajowhite;
   color: #fff;
   text-align: center;
+  display: inline flow-root;
 }
 .lo img{
     width: 100px;

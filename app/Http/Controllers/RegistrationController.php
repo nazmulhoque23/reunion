@@ -112,40 +112,6 @@ class RegistrationController extends Controller
         }else{
             $input->photo = '';
         }
-        
-        // $input->save();
-        // dd($request->all());
-        // if($request->hasFile('photo')){
-        //     $file = $request->file('photo');
-        //     $extension = $file->getClientOriginalExtension();
-        //     $filename = time().'.'.$extension;
-        //     $file->move('images/participent/',$filename);
-            
-        // }
-        // $update_product = DB::table('participents')
-        //     ->updateOrInsert([
-        //         'batch_id' => $request->batch_id,
-        //         'cat_id'=>$request->cat_id,
-        //         'pay' => $request->pay,
-        //         'name' => $request->name,
-        //         'g_name' => $request->g_name,
-        //         'email' => $request->email,
-        //         'mobile' => $request->mobile,
-        //         'fb_link' => $request->fb_link,
-        //         'address' => $request->address,
-        //         'thana' => $request->thana,
-        //         'district_id'=> $request->district_id,
-        //         'division_id' => $request->division_id,
-        //         'blood_id' => $request->blood_id,
-        //         'dress_cat_id' => $request->dress_cat_id,
-        //         'size_id' => $request->size_id,
-        //         'organization' => $request->organization,
-        //         'designation' => $request->designation,
-        //         'org_address' => $request->org_address,
-        //         'photo' =>  $filename,
-                
-        //     ]);
-
             
         $info = array( 
             'currency' => "BDT",
@@ -162,6 +128,7 @@ class RegistrationController extends Controller
             'customer_state' => $request->district_id, 
             'customer_postcode' => "null", 
             'customer_country' => "BD",
+            'status' => "Pending",
             );
             
         $shurjopay_service = new ShurjopayController();
@@ -184,7 +151,8 @@ class RegistrationController extends Controller
                     ->where('mobile', $order_id)
                     ->update(['status' => 'Complete']);
         }
-        // return $shurjopay_service->verify($order_id);
+        $data =  $shurjopay_service->verify($order_id);
+        return view('payment');
     }
 
     

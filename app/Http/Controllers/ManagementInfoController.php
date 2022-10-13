@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\SponsorInfo;
+use App\Models\ManagementInfo;
 
-class SponsorController extends Controller
+class ManagementInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class SponsorController extends Controller
      */
     public function index()
     {
-        $sponsorInfo = SponsorInfo::all();
-        return view('layouts.dashboard.sponsor.index', compact('sponsorInfo'));
+        $managementInfo = ManagementInfo::all();
+        return view('layouts.dashboard.maincom.index', compact('managementInfo'));
     }
 
     /**
@@ -25,7 +25,7 @@ class SponsorController extends Controller
      */
     public function create()
     {
-        return view('layouts.dashboard.sponsor.create');
+        return view('layouts.dashboard.maincom.create');
     }
 
     /**
@@ -38,22 +38,24 @@ class SponsorController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'address'=>'required',
+            'designation' => 'required',
+            'mobile_no' => 'required',
+            'email' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $input= $request->all();
 
         if($image = $request->file('image')){
-            $destinationPath = 'images/sponsor/';
+            $destinationPath = 'images/main_com';
             $profileImage = date('YmdHis') . ".". $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
         }
 
-        SponsorInfo::create($input);
+        ManagementInfo::create($input);
 
-        return redirect()->route('sponsor.index');
+        return redirect()->route('main-committe.index');
     }
 
     /**
@@ -75,8 +77,8 @@ class SponsorController extends Controller
      */
     public function edit($id)
     {
-        $sponsorInfo = SponsorInfo::find($id);
-        return view('layouts.dashboard.sponsor.edit', compact('sponsorInfo'));
+        $managementInfo = ManagementInfo::find($id);
+        return view('layouts.dashboard.maincom.edit',compact('managementInfo'));
     }
 
     /**
@@ -90,16 +92,18 @@ class SponsorController extends Controller
     {
         $request->validate([
             'name' => 'nullable',
-            'address'=>'nullable',
+            'designation' => 'nullable',
+            'mobile_no' => 'nullable',
+            'email' => 'nullable',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
 
         ]);
-        $sponsorInfo = SponsorInfo::find($id);
+        $managementInfo = ManagementInfo::find($id);
 
         $input = $request->all();
 
         if($image = $request->file('image')){
-            $destinationPath = 'images/sponsor';
+            $destinationPath = 'images/main_com';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
@@ -107,9 +111,9 @@ class SponsorController extends Controller
             unset($input['image']);
         }
 
-        $sponsorInfo->update($input);
+        $managementInfo->update($input);
 
-        return redirect()->route('sponsor.index');
+        return redirect()->route('main-committe.index');
     }
 
     /**
@@ -120,7 +124,7 @@ class SponsorController extends Controller
      */
     public function destroy($id)
     {
-        SponsorInfo::find($id)->delete();
+        ManagementInfo::find($id)->delete();
         return redirect()->back();
     }
 }

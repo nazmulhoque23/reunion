@@ -25,3 +25,12 @@
 .main-sidebar .sidebar .hjk {
   margin-top: 50px;
 }
+.main-sidebar .uy {
+  margin-left: 10px;
+}
+.main-sidebar .uy .nav-item .nav-link.active {
+  color: #343a40 !important;
+}
+.main-sidebar .uy .nav-item .nav-link, .main-sidebar .uy .nav-item .sidebar-mini-md .main-sidebar .nav-link, .main-sidebar .uy .nav-item .sidebar-mini-xs .main-sidebar .nav-link {
+  width: 100%;
+}

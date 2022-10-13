@@ -11,8 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
-   
-    <style>
+   <style>
      @font-face {
     font-family: SutonnyOMJ;
     src: url('/fonts/SutonnyOMJ Regular.ttf');
@@ -20,16 +19,12 @@
     body{
       font-family: SutonnyOMJ;
     }
-    </style>
+   </style>
+
   </head>
   <body>
     @include('layouts.nav')
-    <!-- <div class="makeup_slider"></div> -->
-    @include('layouts.carousel')
-    @include('layouts.mainmenu')
-    @include('layouts.about')
-    <!-- @include('layouts.speakers') -->
-    @include('layouts.sponsor')
+    @include('layouts.mainCom')
     @include('layouts.footer')
 
     <!-- Optional JavaScript; choose one of the two! -->

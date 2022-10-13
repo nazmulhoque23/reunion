@@ -62,8 +62,29 @@
                 <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Management Info</p>
+                  <i class="right fas fa-angle-left"></i>
                 </a>
-              </li>
+                <ul class="nav nav-treeview uy">
+                  <li class="nav-item">
+                    <a href="{{route('main-committe.index')}}" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Main Commitee</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Sub Commitee</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Branch Commitee</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>              
               <li class="nav-item">
                 <a href="{{route('sponsor.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

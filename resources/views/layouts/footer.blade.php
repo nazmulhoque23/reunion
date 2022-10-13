@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2022 ALL RIGHTS RESERVED.</p>
+            <p>Copyright © Bhor Bazar A B H High School 2022, Design & Developed by Automate IT Limited.</p>
         </div>
     </div>
 </div>

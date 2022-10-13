@@ -8,6 +8,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\BasicController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\SponsorController;
+use App\Http\Controllers\ManagementInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,10 @@ Route::get('success-url', [RegistrationController::class, 'verifyPayment'])->nam
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 
+Route::get('/main_commitee', [FrontController::class, 'maincommiteeview'])->name('main.com.view');
+
+
+
 //dashboard
 Route::get('/basic-info', [BasicController::class, 'index'])->name('basic-info.index');
 Route::post('/basic-info/logo', [BasicController::class, 'logostore'])->name('basic-info.logo');
@@ -54,3 +59,11 @@ Route::post('/sponsor/store', [SponsorController::class, 'store'])->name('sponso
 Route::get('/sponsor/edit/{id}',[SponsorController::class,'edit'])->name('sponsor.edit');
 Route::post('/sponsor/update/{id}',[SponsorController::class,'update'])->name('sponsor.update');
 Route::delete('/sponsor/delete/{id}',[SponsorController::class,'destroy'])->name('sponsor.destroy');
+
+//main committe
+Route::get('/main-committe', [ManagementInfoController::class, 'index'])->name('main-committe.index');
+Route::get('/main-committe/create', [ManagementInfoController::class, 'create'])->name('main-committe.create');
+Route::post('/main-committe/store', [ManagementInfoController::class, 'store'])->name('main-committe.store');
+Route::get('/main-committe/edit/{id}',[ManagementInfoController::class,'edit'])->name('main-committe.edit');
+Route::post('/main-committe/update/{id}',[ManagementInfoController::class,'update'])->name('main-committe.update');
+Route::delete('/main-committe/delete/{id}',[ManagementInfoController::class,'destroy'])->name('main-committe.destroy');

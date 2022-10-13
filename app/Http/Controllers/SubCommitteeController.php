@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Logo;
-use App\Models\Slider;
-use App\Models\About;
-use App\Models\SponsorInfo;
-use App\Models\ManagementInfo;
 
-class FrontController extends Controller
+class SubCommitteeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +13,7 @@ class FrontController extends Controller
      */
     public function index()
     {
-        $logos = Logo::all();
-        $sliders = Slider::all();
-        $abouts = About::all();
-        $sponsorinfos = SponsorInfo::all();
-        return view('welcome', compact('logos','sliders','abouts','sponsorinfos'));
-    }
-
-    public function maincommiteeview()
-    {
-        $logos = Logo::all();
-        $managementInfo = ManagementInfo::all();
-        return view('main_committe', compact('logos','managementInfo'));
+        //
     }
 
     /**

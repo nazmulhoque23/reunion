@@ -29,5 +29,18 @@
                 margin-top: 50px;
             }
         }
+        .uy{
+            margin-left: 10px;
+            .nav-item {
+                .nav-link.active {
+                    color: #343a40 !important;
+                }
+                .nav-link, .sidebar-mini-md .main-sidebar .nav-link, .sidebar-mini-xs .main-sidebar .nav-link
+                {
+                    width: 100%;
+                }
+            }
+        }
     }
+
 
