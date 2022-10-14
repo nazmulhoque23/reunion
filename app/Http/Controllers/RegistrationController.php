@@ -65,7 +65,7 @@ class RegistrationController extends Controller
             'pay' => 'required',
             'name' => 'required',
             'g_name' => 'required',
-            'email' => 'required',
+            'email' => 'nullable',
             'mobile' => 'required',
             'fb_link' => 'nullable',
             'address' => 'required',
@@ -73,7 +73,7 @@ class RegistrationController extends Controller
             'district_id' => 'required',
             'division_id' => 'nullable',
             'blood_id' => 'nullable',
-            'dress_cat_id' => 'required',
+            'dress_cat_id' => 'nullable',
             'size_id' => 'nullable',
             'photo' => 'required',
             'organization' => 'nullable',
@@ -142,10 +142,7 @@ class RegistrationController extends Controller
         $order_id = $request->order_id;
         $shurjopay_service = new ShurjopayController();
 
-        
         $data = $shurjopay_service->verify($order_id);
-        // dd($data);
-        // echo"$data";
         $list=json_decode($data,true);
         
         // echo $list[0]['order_id'];
@@ -155,11 +152,12 @@ class RegistrationController extends Controller
         
         $input = new Confirmation();
         $input->order_id = $list[0]['order_id'];
-        $input-> amount = $list[0]['amount'];
+        $input->amount = $list[0]['amount'];
         $input->mobile = $list[0]['customer_order_id'];
         $input->msg = $list[0]['sp_massage'];
+        $input->name = $list[0]['name'];
+        $input->transaction_status = $list[0]['transaction_status'];
         $input->save();
-        // dd($data); 
         
         return view('payment');
     }

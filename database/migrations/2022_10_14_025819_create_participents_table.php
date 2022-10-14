@@ -21,7 +21,7 @@ class CreateParticipentsTable extends Migration
             $table->string('pay');
             $table->string('name');
             $table->string('g_name');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('mobile');
             $table->string('fb_link')->nullable();
             $table->string('address');
@@ -29,7 +29,7 @@ class CreateParticipentsTable extends Migration
             $table->bigInteger('district_id');
             $table->bigInteger('division_id')->nullable();
             $table->bigInteger('blood_id')->nullable();
-            $table->bigInteger('dress_cat_id');
+            $table->bigInteger('dress_cat_id')->nullable();
             $table->bigInteger('size_id')->nullable();
             $table->mediumText('photo');
             $table->string('organization')->nullable();

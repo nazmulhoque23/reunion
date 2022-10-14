@@ -97,6 +97,13 @@
             outline: 0;
             box-shadow: 0 0 0 0rem rgba(13, 110, 253, 0.25);
         }
+     @font-face {
+    font-family: SutonnyOMJ;
+    src: url('/fonts/SutonnyOMJ Regular.ttf');
+    }
+    body{
+      font-family: SutonnyOMJ;
+    }
         
     </style>
     

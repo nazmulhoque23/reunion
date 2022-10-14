@@ -25,8 +25,8 @@
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label for="year" class="form-label">ভর্তির বছর</label>
-                                    <select class="form-control" aria-label="Defaul" name="add_id" required>
-                                        <option selected>Select Admission Year</option>
+                                    <select class="form-control"  name="add_id">
+                                        <option selected value="">Select Admission Year</option>
                                         @foreach($batches as $b)
                                         <option value="{{$b->id}}">{{$b->batch_name}}</option>
                                         @endforeach
@@ -36,8 +36,8 @@
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label for="year" class="form-label">এস এস সি ব্যাচ</label>
-                                    <select class="form-control" aria-label="Defaul" name="batch_id" required>
-                                        <option selected>Select Batch</option>
+                                    <select class="form-control"  name="batch_id">
+                                        <option selected value="">Select Batch</option>
                                         @foreach($batches as $b)
                                         <option value="{{$b->id}}">{{$b->batch_name}}</option>
                                         @endforeach
@@ -46,7 +46,9 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3">
-                                    <label for="category_id" class="form-label">বিভাগ নাম</label>
+                                    <label for="category_id" class="form-label">বিভাগ নাম</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <select class="form-control cat_id" aria-label="Defaul" name="cat_id" required>
                                         <option selected>Select Category</option>
                                         @foreach($categories as $item)
@@ -59,7 +61,7 @@
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">অংশগ্রহণের ফি</label>
                                     <div class="pay">
-                                        <input type="text" class="form-control" name="pay" readonly required>
+                                        <input type="text" class="form-control" name="pay" readonly>
                                     </div>
                                     
                                 </div>
@@ -69,7 +71,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">নাম</label>
+                                    <label for="name" class="form-label">নাম</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
@@ -81,7 +85,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="f_name" class="form-label">পিতা/স্বামীর নাম</label>
+                                    <label for="f_name" class="form-label">পিতা/স্বামীর নাম</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="f_name" type="text" class="form-control @error('f_name') is-invalid @enderror" name="g_name" value="{{ old('f_name') }}" required autocomplete="Father Name" autofocus>
 
                                     @error('f_name')
@@ -97,7 +103,7 @@
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">ইমেল</label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -108,7 +114,9 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="mobile" class="form-label">মোবাইল নাম্বর</label>
+                                    <label for="mobile" class="form-label">মোবাইল নাম্বর</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="mobile" type="text" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}" required autocomplete="mobile" autofocus>
 
                                     @error('mobile')
@@ -128,13 +136,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="address" class="form-label">স্থায়ী ঠিকানা(বাড়ির নাম, গ্রাম, পোস্ট অফিস)</label>
+                                    <label for="address" class="form-label">স্থায়ী ঠিকানা(বাড়ির নাম, গ্রাম, পোস্ট অফিস)</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="address" type="text" class="form-control" name="address" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="mailing_address" class="form-label">থানা/উপজেলা</label>
+                                    <label for="mailing_address" class="form-label">থানা/উপজেলা</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="mailing_address" type="text" class="form-control" name="thana" required>
                                 </div>
                             </div>
@@ -142,9 +154,11 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="year" class="form-label">জেলা</label>
-                                    <select class="form-control" aria-label="Defaul" name="district_id" required>
-                                        <option selected>Select District</option>
+                                    <label for="year" class="form-label">জেলা</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
+                                    <select class="form-control" aria-label="Defaul" name="district_id">
+                                        <option selected value="">Select District</option>
                                         @foreach($districts as $item)
                                         <option value="{{$item->id}}">{{$item->district_name}}</option>
                                         @endforeach
@@ -155,7 +169,7 @@
                                 <div class="mb-3">
                                     <label for="category_id" class="form-label">বিভাগ</label>
                                     <select class="form-control" aria-label="Defaul" name="division_id">
-                                        <option selected>Select Division</option>
+                                        <option selected value="">Select Division</option>
                                         @foreach($divisions as $item)
                                         <option value="{{$item->id}}">{{$item->division_name}}</option>
                                         @endforeach
@@ -166,7 +180,7 @@
                                 <div class="mb-3">
                                     <label for="year" class="form-label">ব্লাড গ্রুপ</label>
                                     <select class="form-control" aria-label="Defaul" name="blood_id">
-                                        <option selected>Select Blood Group</option>
+                                        <option selected value="">Select Blood Group</option>
                                         @foreach($bloods as $item)
                                         <option value="{{$item->id}}">{{$item->blood}}</option>
                                         @endforeach
@@ -177,9 +191,11 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="category_id" class="form-label">পোশাক এর ধরণ</label>
+                                    <label for="category_id" class="form-label">পোশাক এর ধরণ</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <select class="form-control" id="mySelectBox" aria-label="Defaul" name="dress_cat_id">
-                                        <option selected>Choose</option>
+                                        <option selected value="">Choose</option>
                                         @foreach($dresscategories as $item)
                                         <option value="{{$item->id}}">{{$item->d_name}}</option>
                                         @endforeach
@@ -188,7 +204,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="img" class="form-label">ছবি</label>
+                                    <label for="img" class="form-label">ছবি</label><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
                                     <input id="img" type="file" class="form-control" name="photo">
                                 </div>
                             </div>
@@ -199,7 +217,7 @@
                                     <div class="mb-3">
                                         <label for="category_id" class="form-label">ড্রেজ সাইজ (টিশার্ট)</label>
                                         <select class="form-control" aria-label="Defaul" name="size_id">
-                                            <option selected>Tshirt Size</option>
+                                            <option selected value="">Tshirt Size</option>
                                             @foreach($thsirts as $item)
                                             <option value="{{$item->id}}">{{$item->size}}</option>
                                             @endforeach
@@ -261,5 +279,13 @@
     #status{
         display: none;
     }
+    .bi.bi-asterisk {
+  color: #ff0202;
+  margin-left: 8px;
+  margin-top: -5px;
+}
+.pay input {
+  pointer-events: none;
+}
 </style>
 @endsection

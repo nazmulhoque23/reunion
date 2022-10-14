@@ -12,7 +12,9 @@ class Confirmation extends Model
         'order_id',
         'amount',
         'mobile',
-        'msg'
+        'msg',
+        'name',
+        'transaction_status'
     ];
 
 }

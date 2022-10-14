@@ -19,6 +19,8 @@ class CreateConfirmationsTable extends Migration
             $table->double('amount')->nullable();
             $table->string('mobile')->nullable();
             $table->string('msg')->nullable();
+            $table->string('name')->nullable();
+            $table->string('transaction_status')->nullable();
             $table->timestamps();
         });
     }
