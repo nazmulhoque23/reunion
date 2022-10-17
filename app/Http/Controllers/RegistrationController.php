@@ -150,14 +150,14 @@ class RegistrationController extends Controller
         // print_r($list);
         // echo "</pre>";
         
-        $input = new Confirmation();
-        $input->order_id = $list[0]['order_id'];
-        $input->amount = $list[0]['amount'];
-        $input->mobile = $list[0]['customer_order_id'];
-        $input->msg = $list[0]['sp_massage'];
-        $input->name = $list[0]['name'];
-        $input->transaction_status = $list[0]['transaction_status'];
-        $input->save();
+        // $input = new Confirmation();
+        // $input->order_id = $list[0]['order_id'];
+        // $input->amount = $list[0]['amount'];
+        // $input->mobile = $list[0]['customer_order_id'];
+        // $input->msg = $list[0]['sp_massage'];
+        // $input->name = $list[0]['name'];
+        // $input->transaction_status = $list[0]['transaction_status'];
+        // $input->save();
         
         return view('payment');
     }
@@ -207,4 +207,6 @@ class RegistrationController extends Controller
     {
         //
     }
+
+    
 }
