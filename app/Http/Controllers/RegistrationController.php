@@ -14,6 +14,7 @@ use App\Models\Participent;
 use App\Models\Confirmation;
 use Illuminate\Support\Facades\DB;
 use shurjopayv2\ShurjopayLaravelPackage8\Http\Controllers\ShurjopayController;
+use PDF;
 
 class RegistrationController extends Controller
 {
@@ -208,5 +209,14 @@ class RegistrationController extends Controller
         //
     }
 
-    
+    public function pdfview(Request $request){
+        if($request->has('download')){
+            $pdf = PDF::loadView('layouts.finalform');
+            return $pdf->download('new.pdf');
+
+        }
+        return view('payment');            
+
+        
+    }
 }

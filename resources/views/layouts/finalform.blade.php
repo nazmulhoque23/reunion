@@ -1,14 +1,15 @@
 <style media = "screen">
     #content{
-      background-color: lightblue !important;
+      background-color: white !important;
+      
       
     }
     
 </style>
+<div id = "content">
+<div class = "container" >
 
-<div id = "content" >
-<div class="container">
-    
+        
             <div class="row">
                 <div class="col-sm-3 col-md-3">
             
@@ -17,11 +18,11 @@
                 </div>
 
                 <div class="col-sm-6 col-md-6 text-center">
-                    <a href="#" class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ন জয়ন্তী উৎসব ২০২৩</a>
+                    <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
                     <br/>
-                    <a href="#" class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</a>
+                    <p class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
                     <br/>
-                    <a href="#" class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</a>
+                    <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
@@ -45,7 +46,7 @@
                 <div class="col-sm-6 col-md-6 text-center" >
                     <div class = "form-group" >
             
-                        <font style="border:green; border-width:10px; border-style:outset;">  প্রাপ্তি স্বীকার </font>
+                        <span style="border:green; border-width:5px; border-style:outset;">  প্রাপ্তি স্বীকার </span>
                         
                     </div>
                 </div>
@@ -59,13 +60,13 @@
                     </div>
                 </div>
             </div>
-
+</br>
             <div class = "row">
                 <div class = "col-sm-6 col-md-6">
                     <p>নাম:  </p>
                 </div>
-                <div class = "col-sm-5 col-md-5" style="text-align:right;">
-                    <p>্ব্যাচ: </p>
+                <div class = "col-sm-4 col-md-4" style="text-align:right;">
+                    <p>ব্যাচ: </p>
                 </div>
             </div>
             <div class = "row">
@@ -105,7 +106,6 @@
             </div>
             
 </div>
-
-            
+    
 </div>
-<a id = "download" class="btn btn-primary" style="align-items:center;">download</a>    
+      

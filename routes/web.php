@@ -35,6 +35,8 @@ Route::post('payment-gateway', [RegistrationController::class, 'store'])->name('
 Route::get('/registerCategory', [RegistrationController::class, 'registerCategory']);
 Route::get('success-url', [RegistrationController::class, 'verifyPayment']);
 
+Route::get('success-url/pdfview', [RegistrationController::class, 'pdfview']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 

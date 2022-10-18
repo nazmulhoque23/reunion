@@ -1,6 +1,4 @@
-
     <div class="container">
-
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="card" style="margin:10%;">
@@ -20,12 +18,19 @@
                             <p style="font-size:20px;font-weight:bolder">Your payment process has been succeeded.</p>
 
                         </div>
+                    
+                        
                     </div>
                     <div class="col-md-3"></div>
+                    <div id = "htmlContent">
+                    @include('layouts.finalform')
+                    </div>
+                    <div id="editor"></div>
                 </div>
-
+                
             </div>
         </div>
-    </div>
+        
+   
     </div> <!-- /container -->
 
