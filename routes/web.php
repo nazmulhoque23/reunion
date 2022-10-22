@@ -12,6 +12,7 @@ use App\Http\Controllers\ManagementInfoController;
 use App\Http\Controllers\SubCommitteeController;
 use App\Http\Controllers\BranchCommitteeController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,13 +30,14 @@ Route::get('/', [FrontController::class,'index'])->name('landingPage');
 
 Auth::routes();
 
-Route::get('logout', [AuthController::class,'logout'])->name('logout');
+//Route::get('logout', [AuthController::class,'logout'])->name('logout');
 Route::get('/register', [RegistrationController::class, 'index'])->name('register');
 Route::post('payment-gateway', [RegistrationController::class, 'store'])->name('register.store');
 Route::get('/registerCategory', [RegistrationController::class, 'registerCategory']);
+
 Route::get('success-url', [RegistrationController::class, 'verifyPayment']);
 
-Route::get('success-url/pdfview', [RegistrationController::class, 'pdfview']);
+Route::get('pdf-download',[RegistrationController::class, 'pdfview'])->name('layouts.finalform');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');

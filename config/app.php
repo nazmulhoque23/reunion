@@ -176,7 +176,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //PDF providers
-        Barryvdh\DomPDF\ServiceProvider::class,
+        niklasravnsborg\LaravelPdf\PdfServiceProvider::class
+        
+        
         
 
     ],
@@ -235,8 +237,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         //pdf
-        'PDF' => Barryvdh\DomPDF\Facade::class,
-
+        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class
+        
     ],
 
 ];

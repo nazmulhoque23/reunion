@@ -22,12 +22,9 @@
                         
                     </div>
                     <div class="col-md-3"></div>
-                    <div id = "htmlContent">
-                    @include('layouts.finalform')
-                    </div>
-                    <div id="editor"></div>
+                    
                 </div>
-                
+                @include('layouts.finalform')
             </div>
         </div>
         

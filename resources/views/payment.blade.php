@@ -20,7 +20,7 @@
   </head>
 
   <style>
-    p {
+    @font-face {
     font-family: SutonnyOMJ;
     src: url('/fonts/SutonnyOMJ Regular.ttf');
     }
@@ -48,7 +48,8 @@
   
     @include('layouts.nav')
     @include('layouts.pay')
-    <a href = "{{ url('success-url/pdfview')}}" class = "btn btn-success" name = "download" style = "margin-left:1000px; margin-top:-250px; ">Download</a>
+    
+<a href = "{{ route('layouts.finalform')}}" class = "btn btn-success" name = "download" style = "margin-left:1000px; margin-top:-250px; ">Download</a>
   </br>
     </br>
     </br>

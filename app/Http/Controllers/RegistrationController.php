@@ -13,6 +13,8 @@ use App\Models\DressCategory;
 use App\Models\Participent;
 use App\Models\Confirmation;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\View;
 use shurjopayv2\ShurjopayLaravelPackage8\Http\Controllers\ShurjopayController;
 use PDF;
 
@@ -159,8 +161,10 @@ class RegistrationController extends Controller
         // $input->name = $list[0]['name'];
         // $input->transaction_status = $list[0]['transaction_status'];
         // $input->save();
-        
+
         return view('payment');
+        
+        
     }
 
     
@@ -209,14 +213,71 @@ class RegistrationController extends Controller
         //
     }
 
-    public function pdfview(Request $request){
-        if($request->has('download')){
-            $pdf = PDF::loadView('layouts.finalform');
-            return $pdf->download('new.pdf');
-
-        }
-        return view('payment');            
-
+    public function pdfview(){
+            
+        $pdf = new \Mpdf\Mpdf([
+            'default font'=>'nikosh',
+        ]);
+        $pdf->WriteHTML('<table style = "font-family:nikosh;" width="70%">
+        <tr>
+            
+            <td style = "text-align: center;">
+                <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
+                
+                <p class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
+                
+                <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
+            </td>
+            
+        </tr>
         
+        <tr>
+            <td>
+                <label style = "width: 150px;">সদস্য নং:  </label>
+            </td>
+        
+            <td style="width:15px;">
+                <label>তারিখ:  </label>
+            </td>
+        </tr>
+        <tr >
+                <td style="text-align: left;">
+                <label style = "width: 150px;">নাম:  </label>
+                </td>
+                <td style = "text-align: left">
+                <label style = "width: 150px;">ব্যাচ নং:  </label>
+                </td>
+        </tr>
+        <tr >            
+                <td>
+                <label >পিতা/স্বামির নাম:  </label>
+                </td>
+                <td style="align:left;margin-left:20px;">
+                <label >ব্লাড গ্রুপ:  </label>
+                </td>
+                
+            </tr>
+            <tr>
+               <td> <label >ঠিকানা:  </label></td>
+            </>tr    
+            <tr  style="text-align:justify">
+                <td >
+                <label>টাকার পরিমান:  </label>
+                </td>
+                <td>
+                <label>ড্রেস সাইজ:  </label>
+                </td>
+            </tr>
+
+            <tr >
+                <td style="text-align: left; padding: 15px;">
+                <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
+                </td>
+                <td style = "padding: 30px;width:20px;">
+                <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
+                </td>
+            </tr>
+    </table>');
+        return response($pdf->Output('test.pdf',"I"),200)->header('Content-Type','application/pdf');
     }
 }
