@@ -1,91 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
-<meta charset="utf-8">
-<style media = "screen">
-    #content{
-      background-color: white !important;
-      
-      
+    <title>Hi</title>
+    <style>
+    @page{
+        size: 600px 900px; margin:0!important; padding:0!important
+        
     }
     
+    body {
+    font-family: 'nikosh';
+    }
+
+
 </style>
+
 </head>
 <body>
-<div id = "content">
-<div class = "container" >
-
-<table width="100%">
-            <tr>
-                <td style = "align:left;">
-                    <a class="navbar-brandd lo ghyu"><img src="{{asset('images/logo/1665603727.jpg')}}" alt=""></a>
-
-                </td>
-                <td style = "align: center;">
-                    <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
-                    
-                    <p class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
-                    
-                    <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
-                </td>
-                <td style = "align: center;">
-
-                    <a class="navbar-brandd lo"><img src="{{asset('images/logo/1665603727.jpg')}}" alt=""></a>
-                </td>
-            </tr>
-            <tr>
-                <td style = "text-align: center; padding:15px;">
-                <label style = "width: 150px;">সদস্য নং:  </label>
-                </td>
-                <td style= "text-align: center;">
-                <label >প্রাপ্তি স্বীকার:  </label>
-                </td>
-                <td style = "align:right;">
-                <label style = "width: 150px;">তারিখ:  </label>
-                </td>
-            </tr>
+    <div class="container">
+        <img src="images/logo/1665603727.jpg" style="width: 60px; height:80px; float: left;" />
             
-            <tr >
-                <th style="text-align: center; padding:15px;">
-                <label style = "width: 150px;">নাম:  </label>
-                </th>
-                <th style = "text-align: center">
-                <label style = "width: 150px;">ব্যাচ নং:  </label>
-                </th>
-            </tr>
-           
-            <tr>            
-                <td style="text-align: center;">
-                <label style = "width: 150px;">পিতা/স্বামির নাম:  </label>
-                </td>
-                <td style = "text-align: center">
-                <label style = "width: 150px;">ব্লাড গ্রুপ:  </label>
-                </td>
-                <td style = "text-align: left">
-                <label style = "width: 150px;">ঠিকানা:  </label>
-                </td>
-            </tr>
+        <div class="row" style="text-align: center;">
+            <p class='title' style='font-size: 30px; color:rgb(255,20,147);'>সুবর্ণ জয়নতী উৎসব ২০২৩</p>
+            <p class='title' style='font-size: 25px; color:rgb(0,100,0);'>ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
+            <p class='title2' style='font-size: 20px; color:rgb(0,0,0);'> ভোর বাজার,সোনাগাজী, ফেনী</p>
 
-            <tr >
-                <td style="text-align: center; padding:15px;">
-                <label style = "display: inline-block; width: 150px;">টাকার পরিমান:  </label>
-                </td>
-                <td style = "text-align: center">
-                <label style = "display: inline-block; width: 150px;">ড্রেস সাইজ:  </label>
-                </td>
-            </tr>
+            
+        </div>
+        <div class= "row" >
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
 
-            <tr >
-                <td style="text-align: center; padding: 15px;">
-                <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
-                </td>
-                <td style = "text-align: center;">
-                <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
-                </td>
-            </tr>
+            <label>সদস্য নং:
+                    
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+                তারিখ:      
+            </label>
+        </div>   
+        <br/>
+        <div class="row">
 
-        </table>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;  
+        
+            <label> নাম:         
+            
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+        
+                ব্যাচ নং:      
+            </label>
+        </div>
+
+        <div class= "row">
+
+            <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                পিতা/স্বামির নাম:
+                 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+        
+                ব্লাড গ্রুপ:   
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+
+                ঠিকানা:
+            </label>
+            
+        </div>   
+        
+        <div class="row">
+                
+            <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                টাকার পরিমান:a
+                     
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+            
+                ড্রেস সাইজ:      
+            </label>
+
+        </div>
+        <br/>
+        <div class = "row">
+            <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
+
+            <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
+        </div>
     </div>
-    
-</div>
 </body>
 </html>

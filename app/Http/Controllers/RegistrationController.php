@@ -214,12 +214,11 @@ class RegistrationController extends Controller
     }
 
     public function pdfview(){
-            
-        $pdf = new \Mpdf\Mpdf([
-            'default font'=>'nikosh',
-        ]);
-        $pdf->WriteHTML('<table style = "font-family:nikosh;" width="70%">
-        <tr>
+        
+        /*
+        $html = '
+        <table style = "font-family:nikosh;" width="70%">
+            <tr>
             
             <td style = "text-align: center;">
                 <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
@@ -277,7 +276,20 @@ class RegistrationController extends Controller
                 <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
                 </td>
             </tr>
-    </table>');
-        return response($pdf->Output('test.pdf',"I"),200)->header('Content-Type','application/pdf');
+    </table>';*/
+
+    /*$view = View::make('layouts.finalform',compact([]));
+    $contents = (string) $view;
+    //$contents = $view->render();
+    $pdf = new \Mpdf\Mpdf([
+        'default font'=>'nikosh',
+    ]);
+    $pdf->WriteHTML($contents);
+    return response($pdf->Output('test.pdf',"I"),200)->header('Content-Type','application/pdf');*/
+    $pdf = PDF::loadView('layouts.finalform', []);
+    return $pdf->download('new.pdf');
+
+
+
     }
 }

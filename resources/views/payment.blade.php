@@ -49,8 +49,8 @@
     @include('layouts.nav')
     @include('layouts.pay')
     
-<a href = "{{ route('layouts.finalform')}}" class = "btn btn-success" name = "download" style = "margin-left:1000px; margin-top:-250px; ">Download</a>
-  </br>
+    <a href = "{{ route('layouts.finalform')}}" class = "btn btn-success" name = "download" style = "margin-left:1000px; margin-top:-250px; ">Download the ticket</a>
+    </br>
     </br>
     </br>
     </br>
