@@ -19,7 +19,7 @@
     <table width="100%">
             <tr>
                 <td>
-                    <a class="navbar-brandd lo ghyu"><img src="images/logo/1665603727.jpg" style = "width:70px; height:70px;"></a>
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/1665645453.jpg" style = "width:90px; height:90px;"></a>
                 </td>
                 <td style = "display: inline-block; align-items: center; padding:0px;">
                     <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
@@ -28,8 +28,8 @@
                     
                     <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
                 </td>
-                <td style = "text-align: right; justify-content: center;">
-                    <a class="navbar-brandd lo ghyu"><img src="images/logo/123456787.jpg" style = "width:90px; height:90px;"></a>
+                <td>
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/123456787.jpg" style = "width:90px; height:90px;margin-top:60px;"></a>
                 </td>
             </tr>
 
@@ -69,15 +69,14 @@
                 <td>
                     <label>ঠিকানা:  </label>
                 </td>
+                <td style = "text-align: center">
+                    <label>ড্রেস সাইজঃ  </label>
+                </td>
             </tr>
             <tr >
                 <td style="text-align: left;">
                     <label>টাকার পরিমাণঃ  </label>
                 </td>
-                <td style = "text-align: center">
-                    <label>ড্রেস সাইজঃ  </label>
-                </td>
-                
             </tr>
             <br/>
             <tr>
