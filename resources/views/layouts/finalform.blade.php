@@ -17,27 +17,29 @@
 </head>
 <body>
     <table width="100%">
-            <tr style = "padding: 30px;">
-                <td style = "text-align: left;">
-                    <a class="navbar-brandd lo ghyu"><img src="images/logo/1665603727.jpg" style = "width:50px; height:50px;"></a>
+            <tr>
+                <td>
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/1665603727.jpg" style = "width:70px; height:70px;"></a>
                 </td>
-                <td style = "text-align: center;">
+                <td style = "display: inline-block; align-items: center; padding:0px;">
                     <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
                     
                     <p class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
                     
                     <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
                 </td>
-                <td style = "text-align: right;">
-                    <a class="navbar-brandd lo ghyu"><img src="images/logo/123456787.jpg" style = "width:70px; height:70px;"></a>
+                <td style = "text-align: right; justify-content: center;">
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/123456787.jpg" style = "width:90px; height:90px;"></a>
                 </td>
             </tr>
+
             <br/>
             <br/>
             <br/>
             <br/>
+
             <tr>
-                <td style = "text-align:left; paddin: 40px;">
+                <td style = "text-align:left;">
                     <label>সদস্য নং:  </label>
                 </td>
                 
@@ -64,27 +66,25 @@
                 
             </tr>
             <tr>
-                <td style = "text-align: left">
+                <td>
                     <label>ঠিকানা:  </label>
                 </td>
             </tr>
-
             <tr >
                 <td style="text-align: left;">
-                    <label>টাকার পরিমান:  </label>
+                    <label>টাকার পরিমাণঃ  </label>
                 </td>
                 <td style = "text-align: center">
-                    <label>ড্রেস সাইজ:  </label>
+                    <label>ড্রেস সাইজঃ  </label>
                 </td>
+                
             </tr>
             <br/>
-            <br/>
-            <br/>
-            <tr >
+            <tr>
                 <td style="text-align: left;">
                     <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
                 </td>
-                <td style = "text-align: center;">
+                <td style = "text-align: center; padding: 20px;">
                     <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
                 </td>
             </tr>
