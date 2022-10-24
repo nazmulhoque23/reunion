@@ -16,86 +16,78 @@
 
 </head>
 <body>
-    <div class="container">
-        <img src="images/logo/1665603727.jpg" style="width: 60px; height:80px; float: left;" />
-            
-        <div class="row" style="text-align: center;">
-            <p class='title' style='font-size: 30px; color:rgb(255,20,147);'>সুবর্ণ জয়নতী উৎসব ২০২৩</p>
-            <p class='title' style='font-size: 25px; color:rgb(0,100,0);'>ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
-            <p class='title2' style='font-size: 20px; color:rgb(0,0,0);'> ভোর বাজার,সোনাগাজী, ফেনী</p>
-
-            
-        </div>
-        <div class= "row" >
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-
-            <label>সদস্য নং:
+    <table width="100%">
+            <tr style = "padding: 30px;">
+                <td style = "text-align: left;">
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/1665603727.jpg" style = "width:50px; height:50px;"></a>
+                </td>
+                <td style = "text-align: center;">
+                    <p class="title" style="font-size: 25px; color:rgb(255,20,147);">সুবর্ণ জয়নতী উৎসব ২০২৩</p>
                     
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-                তারিখ:      
-            </label>
-        </div>   
-        <br/>
-        <div class="row">
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;  
-        
-            <label> নাম:         
-            
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                
-        
-                ব্যাচ নং:      
-            </label>
-        </div>
-
-        <div class= "row">
-
-            <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-                পিতা/স্বামির নাম:
-                 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                
-        
-                ব্লাড গ্রুপ:   
-                
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-
-                ঠিকানা:
-            </label>
-            
-        </div>   
-        
-        <div class="row">
-                
-            <label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-                টাকার পরিমান:a
-                     
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p class="title" style="font-size: 18px; color:rgb(0,100,0);">ভোরবাজার এডভোকেট বেলায়েত হোসেন উচ্চ বিদ্যালয়</p>
                     
-            
-                ড্রেস সাইজ:      
-            </label>
+                    <p class="title2" style="color:rgb(0,0,0);"> ভোর বাজার,সোনাগাজী, ফেনী</p>
+                </td>
+                <td style = "text-align: right;">
+                    <a class="navbar-brandd lo ghyu"><img src="images/logo/123456787.jpg" style = "width:70px; height:70px;"></a>
+                </td>
+            </tr>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <tr>
+                <td style = "text-align:left; paddin: 40px;">
+                    <label>সদস্য নং:  </label>
+                </td>
+                
+                <td style="text-align:center;">তারিখ</td>
+                
+            </tr>
+            </br>
+            <tr >
+                <td style="text-align: left;">
+                    <label>নাম:  </label>
+                </td>
+                <td style = "text-align: center">
+                    <label>ব্যাচ নং:  </label>
+                </td>
+            </tr>
 
-        </div>
-        <br/>
-        <div class = "row">
-            <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
+            <tr >
+                <td style="text-align: left;">
+                    <label>পিতা/স্বামির নাম:  </label>
+                </td>
+                <td style = "text-align: center">
+                    <label>ব্লাড গ্রুপ:  </label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td style = "text-align: left">
+                    <label>ঠিকানা:  </label>
+                </td>
+            </tr>
 
-            <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
-        </div>
-    </div>
+            <tr >
+                <td style="text-align: left;">
+                    <label>টাকার পরিমান:  </label>
+                </td>
+                <td style = "text-align: center">
+                    <label>ড্রেস সাইজ:  </label>
+                </td>
+            </tr>
+            <br/>
+            <br/>
+            <br/>
+            <tr >
+                <td style="text-align: left;">
+                    <h3 style = "color:rgb(255,20,147)">ধন্যবাদের সহিত গ্রহন করা হলো</h3>
+                </td>
+                <td style = "text-align: center;">
+                    <span style="text-decoration:overline;">দায়িত্তপ্রাপ্ত ব্যাক্তির স্বাক্ষর</span>
+                </td>
+            </tr>
+    </table>
 </body>
 </html>
